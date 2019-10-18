@@ -26,22 +26,15 @@
         <!--palette #cc99c9 #9ec1cf #9ee09e #fdfd97 #feb144 #ff6663-->
     </a-assets>
     <a-scene>
-<!--
-        <a-camera>
-                <a-cursor></a-cursor>
-        </a-camera>
--->
         <a-light type="ambient"></a-light>
         <a-light type="directional" position="0 10 5" intensity=".2"></a-light>
         <a-sky color="#FF6663" animation="property: material.color; from: #FF6663; to: #CC99C9; loop: true; dur: 5000; easing: linear; dir: alternate"></a-sky>
-<!--        <a-entity position="10 -2 -10" rotation="0 45 60">-->
         <a-entity id="camera" position="0 0 0" rotation="0 0 0">
             <a-camera>
                 <a-cursor></a-cursor>
             </a-camera>
         </a-entity>
         <!--start main-->
-<!-- position="0 0 -20" rotation="-60 -30 -30"-->
         <a-entity id="main" scale="0.01 0.01 0.01" position="-11 7.5 -10" rotation="0 0 0" animation="property:rotation; from: 0 0 0; to: -60 -15 -30; dur: 2000; delay: 5000000;" animation__position="property: position; from: -11 7.5 -10; to: 0 0 -30; dur: 2000; delay: 5000000;" animation__zoom="property: position; from: 0 0 -30; to: 0 0 -13.5; dur: 2000; delay: 5000000;" animation__respos="property: position; to: -11 7.5 -10; dur: 2000; delay: 10000000;" animation__resrot="property: rotation; to: 0 0 0; dur: 2000; delay: 10000000;">
             <a-box color="#fcf594" width="1180" height="2370" depth="20" position="0 -120 -30"></a-box>
             <!--home button-->
@@ -154,7 +147,7 @@
             <a-box width="300" height="100" depth="0" color="#9EC1CF" position="1425 -380 0"></a-box>
             <a-text value="Enter?" position="1550 -380 1" color="#52437b" width="1500" align="right"></a-text>
             <a-box width="300" height="150" color="#52437b" position="1100 -580 0"></a-box>
-            <a-text font="https://cdn.aframe.io/fonts/DejaVu-sdf.fnt" value="GO!" position="1030 -570 1" color="#dfdfdf" width="2400" event-set__enter="_event: click; _target: #main; animation.delay: 3000; animation__position.delay: 0; animation__zoom.delay: 6000;" event-set__instructions="_event: click; _target: #instructions; visible: true;" play-sound></a-text>
+            <a-text font="https://cdn.aframe.io/fonts/DejaVu-sdf.fnt" value="GO!" position="1030 -570 1" color="#dfdfdf" width="2400" event-set__enter="_event: click; _target: #main; animation.delay: 3000; animation__position.delay: 0; animation__zoom.delay: 6000;" event-set__instructions="_event: click; _target: #instructions; visible: true;"></a-text>
             <!--end chat-->
             <a-text id="instructions" value="Press home button to exit.\nHover over these rainbow squares\nto explore!" rotation="0 90 90" width="1200" position="-540 -900 300" visible="false"></a-text>
             <a-text id="red" value="The red planet is on the top left corner.\nIts rock tastes like strawberry\nand has a slime-like texture.\nSo actually, it's not really rock." rotation="0 90 90" width="800" position="-540 -900 300" visible="false"></a-text>
